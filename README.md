@@ -1,24 +1,105 @@
-### Documentation
+# **Abstractive Summarization of Indian Legal Text using BART**
+
+This repository focuses on re-implementing the work on **Abstractive Summarization of Indian Legal Text** conducted by Law-AI (IIT Kharagpur). It uses the **BART model** (Bidirectional and Auto-Regressive Transformer) to generate concise summaries for Indian legal documents.
+
+---
+
+## **Objective**
+
+- To replicate the methodology employed by Law-AI for abstractive summarization of Indian legal text.
+- To fine-tune the **BART model** for Indian legal text datasets.
+- To evaluate and compare performance with the results presented in the original work.(In progress..)
+
+---
+
+## **Features**
+
+- Fine-tuning the BART model for legal text summarization.
+- Handling complex and verbose Indian legal language.
+- Generating concise abstractive summaries.
+- Detailed comparison with Law-AI's implementation.(To be implemented)
+
+---
+
+## **Steps for Implementation**
+
+1. **Data Collection**
+   - Datasets of Indian legal documents, processed for training and testing.
+   - Preprocessing includes tokenization, formatting, and handling legal jargon.
+
+2. **Model Selection**
+   - Fine-tuning the **BART** model using supervised learning for legal text summarization tasks.
+
+3. **Training**
+   - The model is trained using cross-entropy loss with GPU acceleration for better performance.
+
+4. **Evaluation**
+   - Performance evaluated using:
+     - **ROUGE** (Recall-Oriented Understudy for Gisting Evaluation)
+     - **BLEU** (BiLingual Evaluation Understudy) (To be implemented)
+
+5. **Comparison with Law-AI Results**
+   - Quantitative and qualitative comparisons of generated summaries against the original paper.(To be implemented)
+
+---
+
+## **Tools and Frameworks**
+
+- **Language Models**: BART (via Hugging Face Transformers library)
+- **Libraries**: Python (NLTK, SpaCy, PyTorch/TensorFlow)
+- **Evaluation**: ROUGE metrics
+- **Notebook Environments**: Google Colab for experimentation
+
+---
+
+## **Documentation**
 
 The documentation is provided in the code itself.
 
-#### Refer to the below links for the code:
-
-- [BART_fineTune-final.ipynb](https://colab.research.google.com/drive/17H_1VZZxeQQiWzCq7ycf-Tpm9SGsm2MF?usp=sharing)
+#### **Refer to the links for the code:**
+- [BART_fineTune-final.ipynb](https://colab.research.google.com/drive/17H_1VZZxeQQiWzCq7ycf-Tpm9SGsm2MF?usp=sharing)  
 - [generate_summaries_chunking_BART.ipynb](https://colab.research.google.com/drive/1fxVaC7jWZJp3VDxcFABNLT4-xzHhtpEJ?usp=sharing)
 
-To know more, refer to the file 'NFT_Project'.
+To know more, refer to the file **'NFT_Project'** in the documentation folder.
 
-This work has been done by taking reference from:  
+---
+
+## **References and Resources**
+
+This work is inspired by the original implementation by IIT Kharagpur's **Law-AI**:  
 [https://github.com/Law-AI/summarization/tree/aacl](https://github.com/Law-AI/summarization/tree/aacl)
 
-This is done for educational purposes (re-implementing the work to learn from it).
+This re-implementation is done for **educational purposes** to learn and understand the techniques of legal text summarization.
 
-Refer this for the IN-Abs dataset that was used. It also has the 'generated summaries' and 'finetuned model' as well.
-Link : https://drive.google.com/drive/folders/1bu2u8f_1GicMVo1urBSIAeOMSuxct70T?usp=sharing
+### Dataset and Resources
+- **IN-Abs Dataset**:  
+  Access the dataset, fine-tuned model, and generated summaries:  
+  [Google Drive - IN-Abs Dataset](https://drive.google.com/drive/folders/1bu2u8f_1GicMVo1urBSIAeOMSuxct70T?usp=sharing)  
+  - **Fine-tuned Model**: Located in the `model` folder.  
+  - **Generated Summaries**: Located in the `output` folder.
 
-Finetuned Model can be found in the 'model' folder.
-Generated summaries can be found in the 'output' folder.
+---
+
+## **Challenges**
+
+- Handling the verbosity and complexity of Indian legal text.
+- Overcoming the limited availability of annotated legal datasets.
+- Maintaining domain relevance in abstractive summaries.
+
+---
+
+## **Future Work**
+
+- Exploring other transformer models like Pegasus or T5.
+- Extending the system to summarize legal documents from other legal systems.
+- Investigating transfer learning with domain-specific pre-trained models.
+
+---
+
+### **License**
+
+This project is for educational purposes only and is not intended for commercial use. All credit for the original methodology goes to the **Law-AI** team at IIT Kharagpur.
+
 
 ---
 
